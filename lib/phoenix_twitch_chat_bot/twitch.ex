@@ -2,9 +2,9 @@ defmodule PhoenixTwitchChatBot.Twitch do
   use TMI.Handler
 
   @impl true
-  def handle_message("!" <> command, _sender, chat) do
+  def handle_message("!" <> command, sender, _chat) do
     case command do
-      _ -> Logger.debug("Command "#{command}" was sent.")
+      _ -> Logger.debug("Command '#{command}' was sent by #{sender}.")
     end
   end
 
