@@ -4,7 +4,7 @@ defmodule PhoenixTwitchChatBot.Twitch do
   @impl true
   def handle_message("!" <> command, _sender, chat) do
     case command do
-      _ -> Logger.debug("Command #{command} was sent.")
+      _ -> Logger.debug("Command "#{command}" was sent.")
     end
   end
 
