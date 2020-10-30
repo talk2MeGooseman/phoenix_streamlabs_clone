@@ -1,7 +1,11 @@
 defmodule PhoenixStreamlabsCloneWeb.PageLive do
+  @moduledoc """
+  Example Phoenix Live View generated but Phoenix when scaffolding a new application
+  """
   use PhoenixStreamlabsCloneWeb, :live_view
 
   @impl true
+  @spec mount(any, any, Phoenix.LiveView.Socket.t()) :: {:ok, any}
   def mount(_params, _session, socket) do
     {:ok, assign(socket, query: "", results: %{})}
   end

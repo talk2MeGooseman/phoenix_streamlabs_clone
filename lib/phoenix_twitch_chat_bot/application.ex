@@ -10,7 +10,7 @@ defmodule PhoenixStreamlabsClone.Application do
       user: "codingzeal",
       pass: Application.fetch_env!(:twitch, :chat_oauth),
       chats: ["codingzeal"],
-      handler:  PhoenixStreamlabsClone.Twitch,
+      handler: PhoenixStreamlabsClone.Twitch,
       capabilities: ['membership']
     ]
 

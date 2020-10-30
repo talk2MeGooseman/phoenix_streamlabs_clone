@@ -1,4 +1,7 @@
 defmodule PhoenixStreamlabsClone.Twitch do
+ @moduledoc """
+ Twitch Chat bot handler
+ """
   use TMI.Handler
 
   @impl true

@@ -14,7 +14,11 @@ config :phoenix_twitch_chat_bot,
 config :phoenix_twitch_chat_bot, PhoenixStreamlabsCloneWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "32yfMCeqPtYbFQix/tPJ5jOJdygv3NROS1J/1UnCB775suTHNwrgj3/71Sxq51W3",
-  render_errors: [view: PhoenixStreamlabsCloneWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [
+    view: PhoenixStreamlabsCloneWeb.ErrorView,
+    accepts: ~w(html json),
+    layout: false
+  ],
   pubsub_server: PhoenixStreamlabsClone.PubSub,
   live_view: [signing_salt: "fZsGGxFw"]
 
