@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBot.MixProject do
+defmodule PhoenixStreamlabsClone.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule PhoenixTwitchChatBot.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {PhoenixTwitchChatBot.Application, []},
+      mod: {PhoenixStreamlabsClone.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBotWeb.Endpoint do
+defmodule PhoenixStreamlabsCloneWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :phoenix_twitch_chat_bot
 
   # The session will be stored in the cookie and signed,
@@ -10,7 +10,7 @@ defmodule PhoenixTwitchChatBotWeb.Endpoint do
     signing_salt: "oHnImaW2"
   ]
 
-  socket "/socket", PhoenixTwitchChatBotWeb.UserSocket,
+  socket "/socket", PhoenixStreamlabsCloneWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -50,5 +50,5 @@ defmodule PhoenixTwitchChatBotWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug PhoenixTwitchChatBotWeb.Router
+  plug PhoenixStreamlabsCloneWeb.Router
 end

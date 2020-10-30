@@ -1,5 +1,5 @@
-defmodule PhoenixTwitchChatBotWeb.ErrorView do
-  use PhoenixTwitchChatBotWeb, :view
+defmodule PhoenixStreamlabsCloneWeb.ErrorView do
+  use PhoenixStreamlabsCloneWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBot.Twitch do
+defmodule PhoenixStreamlabsClone.Twitch do
   use TMI.Handler
 
   @impl true

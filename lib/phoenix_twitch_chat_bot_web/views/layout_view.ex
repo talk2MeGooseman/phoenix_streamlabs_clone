@@ -1,3 +1,3 @@
-defmodule PhoenixTwitchChatBotWeb.LayoutView do
-  use PhoenixTwitchChatBotWeb, :view
+defmodule PhoenixStreamlabsCloneWeb.LayoutView do
+  use PhoenixStreamlabsCloneWeb, :view
 end

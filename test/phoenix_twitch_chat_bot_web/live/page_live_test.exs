@@ -1,5 +1,5 @@
-defmodule PhoenixTwitchChatBotWeb.PageLiveTest do
-  use PhoenixTwitchChatBotWeb.ConnCase
+defmodule PhoenixStreamlabsCloneWeb.PageLiveTest do
+  use PhoenixStreamlabsCloneWeb.ConnCase
 
   import Phoenix.LiveViewTest
 

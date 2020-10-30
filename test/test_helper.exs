@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(PhoenixTwitchChatBot.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(PhoenixStreamlabsClone.Repo, :manual)

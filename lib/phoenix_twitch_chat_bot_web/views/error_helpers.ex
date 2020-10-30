@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBotWeb.ErrorHelpers do
+defmodule PhoenixStreamlabsCloneWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule PhoenixTwitchChatBotWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(PhoenixTwitchChatBotWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(PhoenixStreamlabsCloneWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(PhoenixTwitchChatBotWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(PhoenixStreamlabsCloneWeb.Gettext, "errors", msg, opts)
     end
   end
 end

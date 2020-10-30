@@ -1,4 +1,4 @@
-# PhoenixTwitchChatBot
+# Phoenix Streamlabs Clone
 
 To start your Phoenix server:
 

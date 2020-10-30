@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBot.DataCase do
+defmodule PhoenixStreamlabsClone.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule PhoenixTwitchChatBot.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use PhoenixTwitchChatBot.DataCase, async: true`, although
+  by setting `use PhoenixStreamlabsClone.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,20 +18,20 @@ defmodule PhoenixTwitchChatBot.DataCase do
 
   using do
     quote do
-      alias PhoenixTwitchChatBot.Repo
+      alias PhoenixStreamlabsClone.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import PhoenixTwitchChatBot.DataCase
+      import PhoenixStreamlabsClone.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixTwitchChatBot.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixStreamlabsClone.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixTwitchChatBot.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixStreamlabsClone.Repo, {:shared, self()})
     end
 
     :ok

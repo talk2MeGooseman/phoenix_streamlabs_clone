@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBotWeb.ConnCase do
+defmodule PhoenixStreamlabsCloneWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule PhoenixTwitchChatBotWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use PhoenixTwitchChatBotWeb.ConnCase, async: true`, although
+  by setting `use PhoenixStreamlabsCloneWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule PhoenixTwitchChatBotWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import PhoenixTwitchChatBotWeb.ConnCase
+      import PhoenixStreamlabsCloneWeb.ConnCase
 
-      alias PhoenixTwitchChatBotWeb.Router.Helpers, as: Routes
+      alias PhoenixStreamlabsCloneWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint PhoenixTwitchChatBotWeb.Endpoint
+      @endpoint PhoenixStreamlabsCloneWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixTwitchChatBot.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixStreamlabsClone.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixTwitchChatBot.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixStreamlabsClone.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

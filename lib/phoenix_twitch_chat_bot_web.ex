@@ -1,12 +1,12 @@
-defmodule PhoenixTwitchChatBotWeb do
+defmodule PhoenixStreamlabsCloneWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PhoenixTwitchChatBotWeb, :controller
-      use PhoenixTwitchChatBotWeb, :view
+      use PhoenixStreamlabsCloneWeb, :controller
+      use PhoenixStreamlabsCloneWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule PhoenixTwitchChatBotWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PhoenixTwitchChatBotWeb
+      use Phoenix.Controller, namespace: PhoenixStreamlabsCloneWeb
 
       import Plug.Conn
-      import PhoenixTwitchChatBotWeb.Gettext
-      alias PhoenixTwitchChatBotWeb.Router.Helpers, as: Routes
+      import PhoenixStreamlabsCloneWeb.Gettext
+      alias PhoenixStreamlabsCloneWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule PhoenixTwitchChatBotWeb do
     quote do
       use Phoenix.View,
         root: "lib/phoenix_twitch_chat_bot_web/templates",
-        namespace: PhoenixTwitchChatBotWeb
+        namespace: PhoenixStreamlabsCloneWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule PhoenixTwitchChatBotWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {PhoenixTwitchChatBotWeb.LayoutView, "live.html"}
+        layout: {PhoenixStreamlabsCloneWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule PhoenixTwitchChatBotWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PhoenixTwitchChatBotWeb.Gettext
+      import PhoenixStreamlabsCloneWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule PhoenixTwitchChatBotWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import PhoenixTwitchChatBotWeb.ErrorHelpers
-      import PhoenixTwitchChatBotWeb.Gettext
-      alias PhoenixTwitchChatBotWeb.Router.Helpers, as: Routes
+      import PhoenixStreamlabsCloneWeb.ErrorHelpers
+      import PhoenixStreamlabsCloneWeb.Gettext
+      alias PhoenixStreamlabsCloneWeb.Router.Helpers, as: Routes
     end
   end
 

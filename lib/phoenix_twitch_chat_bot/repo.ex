@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBot.Repo do
+defmodule PhoenixStreamlabsClone.Repo do
   use Ecto.Repo,
     otp_app: :phoenix_twitch_chat_bot,
     adapter: Ecto.Adapters.Postgres

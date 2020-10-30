@@ -1,4 +1,4 @@
-defmodule PhoenixTwitchChatBotWeb.ChannelCase do
+defmodule PhoenixStreamlabsCloneWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule PhoenixTwitchChatBotWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use PhoenixTwitchChatBotWeb.ChannelCase, async: true`, although
+  by setting `use PhoenixStreamlabsCloneWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule PhoenixTwitchChatBotWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import PhoenixTwitchChatBotWeb.ChannelCase
+      import PhoenixStreamlabsCloneWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint PhoenixTwitchChatBotWeb.Endpoint
+      @endpoint PhoenixStreamlabsCloneWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixTwitchChatBot.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixStreamlabsClone.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixTwitchChatBot.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixStreamlabsClone.Repo, {:shared, self()})
     end
 
     :ok

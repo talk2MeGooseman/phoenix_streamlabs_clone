@@ -1,11 +1,11 @@
-defmodule PhoenixTwitchChatBotWeb.Router do
-  use PhoenixTwitchChatBotWeb, :router
+defmodule PhoenixStreamlabsCloneWeb.Router do
+  use PhoenixStreamlabsCloneWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {PhoenixTwitchChatBotWeb.LayoutView, :root}
+    plug :put_root_layout, {PhoenixStreamlabsCloneWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,14 @@ defmodule PhoenixTwitchChatBotWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhoenixTwitchChatBotWeb do
+  scope "/", PhoenixStreamlabsCloneWeb do
     pipe_through :browser
 
     live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixTwitchChatBotWeb do
+  # scope "/api", PhoenixStreamlabsCloneWeb do
   #   pipe_through :api
   # end
 
@@ -37,7 +37,7 @@ defmodule PhoenixTwitchChatBotWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: PhoenixTwitchChatBotWeb.Telemetry
+      live_dashboard "/dashboard", metrics: PhoenixStreamlabsCloneWeb.Telemetry
     end
   end
 end
