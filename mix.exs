@@ -57,7 +57,9 @@ defmodule PhoenixStreamlabsClone.MixProject do
       {:tmi, "~> 0.3.0"},
       {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.10", only: :test},
+      {:ueberauth, "~> 0.6"},
+      {:guardian, "~> 2.1"}
     ]
   end
 
