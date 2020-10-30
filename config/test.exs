@@ -20,3 +20,10 @@ config :phoenix_streamlabs_clone, PhoenixStreamlabsCloneWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.UserManager.Guardian,
+  issuer: "phoenix_streamlabs_clone",
+  secret_key: "randomsecret"
+
+config :twitch,
+  chat_oauth: "filler_oauth"

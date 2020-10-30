@@ -2,7 +2,7 @@ defmodule PhoenixStreamlabsClone.UserManager do
   @moduledoc """
   The UserManager context.
   """
-
+  alias Argon2
   import Ecto.Query, warn: false
   alias PhoenixStreamlabsClone.Repo
 
@@ -53,6 +53,33 @@ defmodule PhoenixStreamlabsClone.UserManager do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Authenticates the username and password.
+
+  ## Examples
+
+      iex> authenticate_user(username, password)
+      {:ok, %User{}}
+
+      iex> authenticate_user(username, bad_password)
+      {:error, :invalid_credentials}
+
+  """
+  def authenticate_user(username, plain_text_password) do
+    query = from u in User, where: u.username == ^username
+    case Repo.one(query) do
+      nil ->
+        Argon2.no_user_verify()
+        {:error, :invalid_credentials}
+      user ->
+        if Argon2.verify_pass(plain_text_password, user.password) do
+          {:ok, user}
+        else
+          {:error, :invalid_credentials}
+        end
+    end
   end
 
   @doc """

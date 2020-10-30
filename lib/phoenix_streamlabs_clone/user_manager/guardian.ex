@@ -1,4 +1,4 @@
-defmodule AuthMe.UserManager.Guardian do
+defmodule PhoenixStreamlabsClone.UserManager.Guardian do
   @moduledoc """
   This implementation module encapsulates:
 
@@ -9,7 +9,7 @@ defmodule AuthMe.UserManager.Guardian do
   """
   use Guardian, otp_app: :auth_me
 
-  alias AuthMe.UserManager
+  alias PhoenixStreamlabsClone.UserManager
 
   def subject_for_token(user, _claims) do
     {:ok, to_string(user.id)}

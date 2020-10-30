@@ -37,7 +37,7 @@ guardian_secret_key =
     You can generate one by calling: mix phx.gen.secret
     """
 config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.UserManager.Guardian,
-  issuer: "auth_me",
+  issuer: "phoenix_streamlabs_clone",
   secret_key: guardian_secret_key
 
 # ## Using releases (Elixir v1.9+)
