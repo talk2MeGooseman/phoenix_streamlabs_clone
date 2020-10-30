@@ -59,7 +59,8 @@ defmodule PhoenixStreamlabsClone.MixProject do
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
       {:ueberauth, "~> 0.6"},
-      {:guardian, "~> 2.1"}
+      {:guardian, "~> 2.1"},
+      {:argon2_elixir, "~> 2.0"},
     ]
   end
 

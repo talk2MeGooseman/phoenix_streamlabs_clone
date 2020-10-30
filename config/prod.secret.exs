@@ -23,12 +23,22 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :phoenix_twitch_chat_bot, PhoenixTwitchChatBotWeb.Endpoint,
+config :phoenix_streamlabs_clone, PhoenixTwitchChatBotWeb.Endpoint,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
   secret_key_base: secret_key_base
+
+guardian_secret_key =
+  System.get_env("GUARDIAN_SECRET_KEY") ||
+    raise """
+    environment variable GUARDIAN_SECRET_KEY is missing.
+    You can generate one by calling: mix phx.gen.secret
+    """
+config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.UserManager.Guardian,
+  issuer: "auth_me",
+  secret_key: guardian_secret_key
 
 # ## Using releases (Elixir v1.9+)
 #
