@@ -30,7 +30,7 @@ defmodule PhoenixStreamlabsCloneWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/phoenix_twitch_chat_bot_web/templates",
+        root: "lib/phoenix_streamlabs_clone_web/templates",
         namespace: PhoenixStreamlabsCloneWeb
 
       # Import convenience functions from controllers

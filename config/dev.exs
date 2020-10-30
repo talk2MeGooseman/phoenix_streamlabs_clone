@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :phoenix_twitch_chat_bot, PhoenixStreamlabsClone.Repo,
+config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.Repo,
   username: "postgres",
   password: "postgres",
-  database: "phoenix_twitch_chat_bot_dev",
+  database: "phoenix_streamlabs_clone_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :phoenix_twitch_chat_bot, PhoenixStreamlabsClone.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :phoenix_twitch_chat_bot, PhoenixStreamlabsCloneWeb.Endpoint,
+config :phoenix_streamlabs_clone, PhoenixStreamlabsCloneWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :phoenix_twitch_chat_bot, PhoenixStreamlabsCloneWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :phoenix_twitch_chat_bot, PhoenixStreamlabsCloneWeb.Endpoint,
+config :phoenix_streamlabs_clone, PhoenixStreamlabsCloneWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/phoenix_twitch_chat_bot_web/(live|views)/.*(ex)$",
-      ~r"lib/phoenix_twitch_chat_bot_web/templates/.*(eex)$"
+      ~r"lib/phoenix_streamlabs_clone_web/(live|views)/.*(ex)$",
+      ~r"lib/phoenix_streamlabs_clone_web/templates/.*(eex)$"
     ]
   ]
 

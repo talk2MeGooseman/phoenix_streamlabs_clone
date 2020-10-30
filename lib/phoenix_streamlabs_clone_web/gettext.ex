@@ -20,5 +20,5 @@ defmodule PhoenixStreamlabsCloneWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :phoenix_twitch_chat_bot
+  use Gettext, otp_app: :phoenix_streamlabs_clone
 end

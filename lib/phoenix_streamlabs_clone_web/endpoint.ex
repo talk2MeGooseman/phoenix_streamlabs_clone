@@ -1,12 +1,12 @@
 defmodule PhoenixStreamlabsCloneWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :phoenix_twitch_chat_bot
+  use Phoenix.Endpoint, otp_app: :phoenix_streamlabs_clone
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_phoenix_twitch_chat_bot_key",
+    key: "_phoenix_streamlabs_clone_key",
     signing_salt: "oHnImaW2"
   ]
 
@@ -22,7 +22,7 @@ defmodule PhoenixStreamlabsCloneWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :phoenix_twitch_chat_bot,
+    from: :phoenix_streamlabs_clone,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule PhoenixStreamlabsCloneWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_twitch_chat_bot
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_streamlabs_clone
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

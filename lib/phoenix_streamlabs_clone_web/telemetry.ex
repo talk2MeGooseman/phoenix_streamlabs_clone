@@ -32,11 +32,11 @@ defmodule PhoenixStreamlabsCloneWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("phoenix_twitch_chat_bot.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("phoenix_twitch_chat_bot.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("phoenix_twitch_chat_bot.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("phoenix_twitch_chat_bot.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("phoenix_twitch_chat_bot.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("phoenix_streamlabs_clone.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("phoenix_streamlabs_clone.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("phoenix_streamlabs_clone.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("phoenix_streamlabs_clone.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("phoenix_streamlabs_clone.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),

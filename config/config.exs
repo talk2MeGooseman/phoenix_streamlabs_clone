@@ -7,11 +7,11 @@
 # General application configuration
 use Mix.Config
 
-config :phoenix_twitch_chat_bot,
+config :phoenix_streamlabs_clone,
   ecto_repos: [PhoenixStreamlabsClone.Repo]
 
 # Configures the endpoint
-config :phoenix_twitch_chat_bot, PhoenixStreamlabsCloneWeb.Endpoint,
+config :phoenix_streamlabs_clone, PhoenixStreamlabsCloneWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "32yfMCeqPtYbFQix/tPJ5jOJdygv3NROS1J/1UnCB775suTHNwrgj3/71Sxq51W3",
   render_errors: [

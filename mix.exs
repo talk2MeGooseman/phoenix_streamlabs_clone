@@ -3,7 +3,7 @@ defmodule PhoenixStreamlabsClone.MixProject do
 
   def project do
     [
-      app: :phoenix_twitch_chat_bot,
+      app: :phoenix_streamlabs_clone,
       version: "0.1.0",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -73,7 +73,8 @@ defmodule PhoenixStreamlabsClone.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      lint: ["format", "credo", "dialyzer"]
+      lint: ["format", "credo", "dialyzer"],
+      start: ["phx.server"]
     ]
   end
 end
