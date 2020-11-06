@@ -36,6 +36,7 @@ guardian_secret_key =
     environment variable GUARDIAN_SECRET_KEY is missing.
     You can generate one by calling: mix phx.gen.secret
     """
+
 config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.UserManager.Guardian,
   issuer: "phoenix_streamlabs_clone",
   secret_key: guardian_secret_key

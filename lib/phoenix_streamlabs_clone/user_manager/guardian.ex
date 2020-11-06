@@ -7,7 +7,7 @@ defmodule PhoenixStreamlabsClone.UserManager.Guardian do
   Encoding/Decoding
   Callbacks
   """
-  use Guardian, otp_app: :auth_me
+  use Guardian, otp_app: :phoenix_streamlabs_clone
 
   alias PhoenixStreamlabsClone.UserManager
 

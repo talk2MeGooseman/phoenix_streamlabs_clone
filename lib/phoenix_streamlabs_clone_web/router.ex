@@ -14,10 +14,30 @@ defmodule PhoenixStreamlabsCloneWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :auth do
+    plug PhoenixStreamlabsClone.UserManager.Pipeline
+  end
+
+  # We use ensure_auth to fail if there is no one logged in
+  pipeline :ensure_auth do
+    plug Guardian.Plug.EnsureAuthenticated
+  end
+
   scope "/", PhoenixStreamlabsCloneWeb do
-    pipe_through :browser
+    pipe_through [:browser, :auth]
 
     live "/", PageLive, :index
+
+    get "/login", SessionController, :new
+    post "/login", SessionController, :login
+    get "/logout", SessionController, :logout
+  end
+
+  # Definitely logged in scope
+  scope "/", PhoenixStreamlabsCloneWeb do
+    pipe_through [:browser, :auth, :ensure_auth]
+
+    get "/protected", PageController, :protected
   end
 
   # Other scopes may use custom stacks.

@@ -6,13 +6,13 @@ defmodule PhoenixStreamlabsClone.Application do
   use Application
 
   def start(_type, _args) do
-    config = [
-      user: "codingzeal",
-      pass: Application.fetch_env!(:twitch, :chat_oauth),
-      chats: ["codingzeal"],
-      handler: PhoenixStreamlabsClone.Twitch,
-      capabilities: ['membership']
-    ]
+    # config = [
+    #   user: "codingzeal",
+    #   pass: Application.fetch_env!(:twitch, :chat_oauth),
+    #   chats: ["codingzeal"],
+    #   handler: PhoenixStreamlabsClone.Twitch,
+    #   capabilities: ['membership']
+    # ]
 
     children = [
       # Start the Ecto repository
@@ -22,9 +22,9 @@ defmodule PhoenixStreamlabsClone.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: PhoenixStreamlabsClone.PubSub},
       # Start the Endpoint (http/https)
-      PhoenixStreamlabsCloneWeb.Endpoint,
+      PhoenixStreamlabsCloneWeb.Endpoint
       # Start up twitch chat bot
-      {TMI.Supervisor, config}
+      # {TMI.Supervisor, config}
       # Start a worker by calling: PhoenixStreamlabsClone.Worker.start_link(arg)
       # {PhoenixStreamlabsClone.Worker, arg}
     ]
