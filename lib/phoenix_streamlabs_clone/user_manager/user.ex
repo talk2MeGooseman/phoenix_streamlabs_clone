@@ -6,8 +6,13 @@ defmodule PhoenixStreamlabsClone.UserManager.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :password, :string
-    field :username, :string
+    field :password,         :string
+    field :username,         :string
+    field :email,            :string
+    field :uid,              :string
+    field :description,      :string
+    field :profile_image_url, :string
+    field :provider,         :string
 
     timestamps()
   end
@@ -15,8 +20,8 @@ defmodule PhoenixStreamlabsClone.UserManager.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:username, :password])
-    |> validate_required([:username, :password])
+    |> cast(attrs, [:username, :password, :email, :uid, :description, :profile_image_url, :provider])
+    |> validate_required([:username, :password, :email, :uid])
     |> put_password_hash()
   end
 

@@ -41,6 +41,11 @@ config :phoenix_streamlabs_clone, PhoenixStreamlabsClone.UserManager.Guardian,
   issuer: "phoenix_streamlabs_clone",
   secret_key: guardian_secret_key
 
+config :ueberauth, Ueberauth.Strategy.Twitch.OAuth,
+  client_id: System.get_env("TWITCH_CLIENT_ID"),
+  client_secret: System.get_env("TWITCH_CLIENT_SECRET"),
+  redirect_uri: System.get_env("TWITCH_REDIRECT_URI")
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix

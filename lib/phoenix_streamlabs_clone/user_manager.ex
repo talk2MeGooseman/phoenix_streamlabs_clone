@@ -56,6 +56,25 @@ defmodule PhoenixStreamlabsClone.UserManager do
   end
 
   @doc """
+  Get or create a user.
+
+  ## Examples
+
+      iex> get_or_create_user(%{field: value})
+      {:ok, %User{}}
+
+      iex> get_or_create_user(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def get_or_create_user!(auth \\ %{}) do
+    User
+    |> where([i], i.uid == ^auth.uid)
+    |> where([i], i.provider == "twitch")
+    |> Repo.all()
+  end
+
+  @doc """
   Authenticates the username and password.
 
   ## Examples

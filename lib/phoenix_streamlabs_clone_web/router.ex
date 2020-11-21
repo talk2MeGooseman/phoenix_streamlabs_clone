@@ -40,6 +40,13 @@ defmodule PhoenixStreamlabsCloneWeb.Router do
     get "/protected", PageController, :protected
   end
 
+  scope "/auth", PhoenixStreamlabsCloneWeb do
+    pipe_through [:browser, :auth]
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixStreamlabsCloneWeb do
   #   pipe_through :api

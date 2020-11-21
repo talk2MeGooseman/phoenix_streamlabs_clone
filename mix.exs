@@ -27,7 +27,7 @@ defmodule PhoenixStreamlabsClone.MixProject do
   def application do
     [
       mod: {PhoenixStreamlabsClone.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools],
     ]
   end
 
@@ -58,10 +58,11 @@ defmodule PhoenixStreamlabsClone.MixProject do
       {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:ueberauth, "~> 0.6"},
-      {:guardian, "~> 2.1"},
       {:argon2_elixir, "~> 2.0"},
-      {:guardian_phoenix, "~> 2.0"}
+      {:guardian, "~> 2.1"},
+      {:guardian_phoenix, "~> 2.0"},
+      {:ueberauth, "~> 0.6"},
+      {:ueberauth_twitch, "~> 0.0.1"}
     ]
   end
 
